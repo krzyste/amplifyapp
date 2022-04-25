@@ -22,7 +22,8 @@ function App() {
 
     async function fetchNotes() {
         const apiData = await API.graphql({ query: listTodos });
-        setNotes(apiData.data.listNotes.items);
+        console.log(apiData);
+        setNotes(apiData.data.listTodos.items);
     }
 
     async function createNote() {
